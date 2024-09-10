@@ -1,109 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technial Documentation Page</title>
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body>
-    <nav id="navbar">
-      <header>Documentation</header>
-      <ul>
-        <li>
-          <a class="nav-link" href="#Introduction_to_Python">Introduction to Python</a>
-        </li>
-        <li>
-          <a class="nav-link" href="#Data_Types_in_Python">Data Types in Python</a>
-        </li>
-        <li>
-          <a class="nav-link" href="#Control_Structures_in_Python">Control Structures in Python</a>
-        </li>
-        <li>
-          <a class="nav-link" href="#Functions_in_Python">Functions in Python</a>
-        </li>
-        <li>
-          <a class="nav-link" href="#Object-Oriented_Programming_in_Python">Object-Oriented Programming in Python</a>
-        </li>
-      </ul>
-    </nav>
-    <main id="main-doc">
-      <section id="Introduction_to_Python" class="main-section">
-        <header>Introduction to Python</header>
-          <p>This section will introduce Python, a high-level, interpreted programming language known for its readability and simplicity.</p>
-          <h2>What is Python?</h2>
-          <p>Python is a versatile programming language used for web development, data analysis, artificial intelligence, scientific computing, and more.</p>
-          <pre><code># Example of a simple Python program
-  print("Hello, World!")</code></pre>
-          <h2>Key Features:</h2>
-          <ol>
-            <li>Easy to read and write</li>
-            <li>Extensive standard library</li>
-            <li>Support for multiple programming paradigms</li>
-          </ol>
-      </section>
-      <section id="Data_Types_in_Python" class="main-section">
-        <header>Data Types in Python</header>
-          <p>This section will cover the basic data types available in Python and their uses.</p>
-          <h2>Common Data Types</h2>
-            <ul>
-              <li><strong>`int:`</strong> Represents whole numbers.</li>
-              <li><strong>`float:`</strong> Represents numbers with decimal points.</li>
-              <li><strong>`str:`</strong> Represents text or string data.</li>
-            </ul>
-            <pre><code># Example of different data types
-x = 10        # int
-y = 3.14      # float
-name = "John" # str</code></pre>
-            <h2>Type Conversion:</h2>
-            <p>You can convert between data types using functions like <strong>int()</strong>, <strong>float()</strong>, and <strong>str()</strong>.</p>
-      </section>
-      <section id="Control_Structures_in_Python" class="main-section">
-        <header>Control Structures in Python</header>
-        <p>This section will discuss how to control the flow of your Python programs using conditionals and loops.</p>
-        <h2>Conditional Statements:</h2>
-        <p>Python uses if, elif, and else statements to execute code based on conditions.</p>
-        <pre><code># Example of a conditional statement
-if x > 0:
-   print("x is positive")
-else:
-   print("x is non-positive")</code></pre>
-        <h2>Loops:</h2>
-        <ol>
-          <li><strong>`for`</strong> loop: Iterates over a sequence.</li>
-          <li><strong>`while`</strong> loop: Repeats as long as a condition is true.</li>
-        </ol>
-      </section>
-      <section id="Functions_in_Python" class="main-section">
-        <header>Functions in Python</header>
-          <p>This section will explain how to define and use functions in Python to make your code reusable and organized.</p>
-          <h2>Defining a Function:</h2>
-          <p>Functions in Python are defined using the <strong>`def`</strong> keyword.</p>
-          <pre><code># Example of a function
-def greet(name):
-   return f"Hello, {name}!"</code></pre>
-          <h2>Calling a Function:</h2>
-          <p>To use a function, simply call it by its name and pass the required arguments.</p>
-      </section>
-      <section id="Object-Oriented_Programming_in_Python" class="main-section">
-        <header>Object-Oriented Programming in Python</header>
-          <p>This section will introduce the basics of object-oriented programming (OOP) in Python.</p>
-          <h2>Classes and Objects:</h2>
-          <p>Python allows you to define custom classes to create objects.</p>
-          <pre><code># Example of a class
-class Dog:
-    def __init__(self, name):
-        self.name = name
-    
-    def bark(self):
-        return f"{self.name} says woof!"</code></pre>
-          <h2>OOP Principles:</h2>
-          <ol>
-            <li>Encapsulation</li>
-            <li>Inheritance</li>
-            <li>Polymorphism</li>
-          </ol>
-      </section>
-    </main>
-  </body>
-</html>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin-left: 320px;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+header {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 0px;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;  
+    height: 100%; 
+    background-color: #f4f4f4;
+    padding: 50px 20px 20px 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+#navbar header {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin-bottom: 10px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+#navbar ul li a:hover {
+    background-color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+    #navbar {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    #navbar ul li {
+        margin-right: 10px;
+    }
+
+    #navbar ul li a {
+        padding: 10px 15px;
+    }
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+code, pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    background-color: #f4f4f4;
+    padding: 5px 5px 5px 10px;;
+    margin-left: 0;
+    border-radius: 3px;
+    color: #d6336c;
+}
+
+li {
+    font-size: 16px;
+}
+
+section{
+    padding-bottom: 50px;
+    padding-left: 0;
+}
